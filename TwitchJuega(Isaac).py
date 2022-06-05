@@ -1,24 +1,6 @@
 #  Escrito por Martin_Binaghi, a partir del codigo base escrito por DougDoug y DDarknut, el cual se puede encontrar en:
 #  (https://www.dougdoug.com/twitchplays)
 
-###########################Lo siguiente es texto escrito por DougDoug y DDarknut, traducido por mi###############################
-
-# Hola! Este archivo contiene la logica principal para procesar el chat de Twitch y convertirlo en comandos de juego.
-# El Codigo base fue escrito en Python 3.X y posteriormente actualizado por mi en Python 3.10.
-# Hay otros 2 archivos necesarios para correr este archivo:
-    # TwitchPlays_KeyCodes.py contiene los codigos de teclas y funciones para presionar teclas en el juego. No deberias modificar este archivo salvo que tengas inconvenientes.
-    # TwitchPlays_Connection.py es el codigo que conecta con Twitch. No modificarlo.
-
-# El codigo base proviene principalmente de: 
-    # Wituz's "Twitch Plays" tutorial: http://www.wituz.com/make-your-own-twitch-plays-stream.html
-    # PythonProgramming's "Python Plays GTA V" tutorial: https://pythonprogramming.net/direct-input-game-python-plays-gta-v/
-    # DDarknut's message queue and updates to the Twitch networking code
-
-# Disclaimer: 
-    # Este codigo NO pretende estar profesionalmente optimizado ni organizado.
-    # Hemos creado una version simple que funciona bien para stremear en vivo, y lo comparto con propositos educacionales.
-
-##########################################################
 
 TWITCH_CHANNEL = 'martin_binaghi' # Reemplaza esto con tu usuario de Twitch.
 

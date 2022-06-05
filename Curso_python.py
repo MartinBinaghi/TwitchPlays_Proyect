@@ -3,19 +3,19 @@ import math
 #print("manteca")
 
 def mi_nombre():
-	print("Martin")
+	print("")
 
 #mi_nombre()
 
 def nombre_y_edad(año):
-	print("mi nombre es martin y tengo "+año+" años")
+	print("")
 
 #nombre_y_edad("veinte")
 
 def multiplicacion(num1,num2):
 	print(num1*num2)
 	if (num1*num2 > 100):
-		return ("ta grande")
+		return ("")
 
 #print (multiplicacion(5,100))
 
