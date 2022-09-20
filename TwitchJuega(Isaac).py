@@ -43,7 +43,7 @@ while countdown > 0:
     print(countdown)
     countdown -= 1
     time.sleep(1)
-
+    
 t = TwitchPlays_Connection.Twitch();
 t.twitch_connect(TWITCH_CHANNEL);
 
