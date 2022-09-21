@@ -15,7 +15,6 @@ while countdown > 0:
 timer = 100
 while timer > 0:
     HoldAndReleaseKey(Q, 0.00)
-    HoldAndReleaseKey(W, 0.00)
     HoldAndReleaseKey(E, 0.00)
     HoldAndReleaseKey(R, 0.00)
     HoldAndReleaseKey(T, 0.00)
