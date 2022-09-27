@@ -19,8 +19,6 @@ while timer > 0:
     HoldAndReleaseKey(R, 0.00)
     HoldAndReleaseKey(T, 0.00)
     HoldAndReleaseKey(Y, 0.00)
-    HoldAndReleaseKey(U, 0.00)
-    HoldAndReleaseKey(I, 0.00)
     HoldAndReleaseKey(O, 0.00)
     HoldAndReleaseKey(P, 0.00)
     HoldAndReleaseKey(A, 0.00)
