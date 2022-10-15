@@ -1,6 +1,5 @@
-if __name__ == '__main__':
-    
-    list_nested = []
+
+list_nested = []
     scores = []
     names_2lowest_score = []
     
