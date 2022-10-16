@@ -18,3 +18,5 @@ names_2lowest_score = [list_nested[i][0] for i in range(0, len(list_nested)) if 
 names_2lowest_score.sort()
 for name in names_2lowest_score:
     print(name)
+
+    ####
