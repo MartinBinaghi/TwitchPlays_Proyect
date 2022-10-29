@@ -1,4 +1,4 @@
-words = 'His e-mail is q-lar@freecodecdp.org'
+words = 'His e-mail is q-la@freecodecdp.org'
 pieces = words.split()
 parts = pieces[3].split('"""')
 print(parts)
