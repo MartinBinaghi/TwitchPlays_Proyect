@@ -12,3 +12,12 @@ por2 y = 2 * y
 
 multiplicar :: Float -> Float -> Float
 multiplicar zz tt = zz * tt
+
+signo :: Int -> Int
+signo x | x > 0 = 1
+        | x < 0 = -1
+        | x == 0 = 0
+
+entre0y9 :: Int -> Bool
+entre0y9 x | x >=0 && x <= 9 = True
+            | otherwise = False
