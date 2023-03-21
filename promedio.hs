@@ -9,7 +9,7 @@ duplica a = a + a
 
 por2:: Float -> Float
 por2 y = 2 * y
-
+a
 multiplicar :: Float -> Float -> Float
 multiplicar zz tt = zz * tt
 
