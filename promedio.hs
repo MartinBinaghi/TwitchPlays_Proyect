@@ -20,4 +20,10 @@ signo x | x > 0 = 1
 
 entre0y9 :: Int -> Bool
 entre0y9 x | x >=0 && x <= 9 = True
-            | otherwise = False
+           | otherwise = False
+
+rangoPrecio::Int->String
+rangoPrecio precio | precio <= 0 = "esto no puede ser"
+                   | 0 < precio && precio <2000 = "muy barato"
+                   | 2000 <= precio && precio <= 5000 = "hay que ver bien"
+                   | precio > 5000 = "demasiado caro"
