@@ -40,3 +40,40 @@ min3 x y z = min (min x y) z
 
 dispersion:: Int-> Int ->Int ->Int 
 dispersion x y z = (max3 x y z) - (min3 x y z)
+
+esBisiesto:: Int->Bool
+esBisiesto x | mod x 400 == 0 = True
+        | (mod x 4 == 0) && not (mod x 100 == 0 )=True
+        | otherwise = False
+
+csToFahr:: Float -> Float
+csToFahr x = x * 1.8 + 32
+
+fahrToCs::Float -> Float
+fahrToCs x = (x - 32)/1.8 
+
+haceFrio::Float->Bool
+haceFrio x | fahrToCs x < 8 = True
+        |otherwise = False
+        
+segundo3:: (Int,Int,Int)->Int
+segundo3 (x, y, z) = y
+
+ordena:: (Int,Int)->(Int,Int)
+ordena (x, y) = (min x y , max x y)
+
+rangoPrecioParametrizado:: Int->(Int,Int)->String
+rangoPrecioParametrizado a (x,z) | a < 0 = "esto no puede ser"
+                                 | a < x = "muy barato"
+                                 | a > z = "demasiado caro"
+                                 | a >= x && a <= z = "hay que verlo bien"
+
+mayorA3::Int->Bool
+mayorA3 x | x > 3 = True
+          | otherwise = False
+
+mayor3:: (Int,Int,Int)->(Bool,Bool,Bool)
+mayor3 (x,y,z) = (mayorA3 x, mayorA3 y, mayorA3 z)
+
+todosIguales:: (Int,Int,Int)->Bool
+todosIguales (x,y,z) = x == y && x == z                          
