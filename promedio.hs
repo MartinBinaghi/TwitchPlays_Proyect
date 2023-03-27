@@ -1,3 +1,6 @@
+{-# LANGUAGE DataKinds #-}
+import Text.Parsec.Language (haskell)
+import System.Win32 (xBUTTON1)
 promedio:: Float -> Float -> Float
 promedio x y = (x+y)/2
 
@@ -76,4 +79,26 @@ mayor3:: (Int,Int,Int)->(Bool,Bool,Bool)
 mayor3 (x,y,z) = (mayorA3 x, mayorA3 y, mayorA3 z)
 
 todosIguales:: (Int,Int,Int)->Bool
-todosIguales (x,y,z) = x == y && x == z                          
+todosIguales (x,y,z) = x == y && x == z
+
+eliminarCabeza:: [a] -> [a]
+eliminarCabeza [] = []
+eliminarCabeza (x:xs) = xs
+
+longitud2:: [Int] -> Int
+longitud2 [] = 0
+longitud2 (x:xs) = x + longitud2 xs
+
+largo::[a]->Int
+largo [] = 0
+largo (x:xs) = 1 + largo xs
+
+mayoresQue:: Int->[Int]->[Int]
+mayoresQue n [] = []
+mayoresQue n (x:xs) | n >= x = mayoresQue n xs
+                    | otherwise = x : mayoresQue n xs
+
+multiplica:: Int->[Int]->[Int]
+multiplica n [] = []
+multiplica n (x:xs) = n*x : multiplica n xs
+                
