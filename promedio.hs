@@ -101,4 +101,5 @@ mayoresQue n (x:xs) | n >= x = mayoresQue n xs
 multiplica:: Int->[Int]->[Int]
 multiplica n [] = []
 multiplica n (x:xs) = n*x : multiplica n xs
-                
+
+s
