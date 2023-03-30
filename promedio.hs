@@ -102,4 +102,4 @@ multiplica:: Int->[Int]->[Int]
 multiplica n [] = []
 multiplica n (x:xs) = n*x : multiplica n xs
 
-s
+
