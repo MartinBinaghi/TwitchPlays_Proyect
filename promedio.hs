@@ -1,6 +1,6 @@
 {-# LANGUAGE DataKinds #-}
 import Text.Parsec.Language (haskell)
-import System.Win32 (xBUTTON1)
+import System.Win32 (xBUTTON1, COORD (xPos))
 promedio:: Float -> Float -> Float
 promedio x y = (x+y)/2
 
@@ -101,5 +101,28 @@ mayoresQue n (x:xs) | n >= x = mayoresQue n xs
 multiplica:: Int->[Int]->[Int]
 multiplica n [] = []
 multiplica n (x:xs) = n*x : multiplica n xs
+
+menores10 :: [Int] -> Bool
+menores10 [] = True
+menores10 (x:xs) | x < 10 = menores10 xs
+                 | otherwise = False
+
+soloPares:: [Int]->[Int]
+soloPares [] = []
+soloPares (x:xs) | mod x 2 == 0 = x : soloPares xs           
+                 | otherwise = soloPares xs
+
+mayoresQueN:: Int->[Int]->[Int]
+mayoresQueN n [] = []
+mayoresQueN n (x:xs) | x > n = x : mayoresQueN n xs
+                        | otherwise = mayoresQueN n xs
+
+sumar1:: [Int]->[Int]
+sumar1 [] = []
+sumar1 (x:xs) = x + 1 : sumar1 xs
+
+multiplicaN:: Int->[Int]->[Int]
+multiplicaN n [] = []
+multiplicaN n (x:xs) = n * x : multiplicaN n xs
 
 
