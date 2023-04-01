@@ -125,4 +125,9 @@ multiplicaN:: Int->[Int]->[Int]
 multiplicaN n [] = []
 multiplicaN n (x:xs) = n * x : multiplicaN n xs
 
+concatenar:: [a]->[a]->[a]
+concatenar [] [] = []
+concatenar [] (x:xs) = x : concatenar [] xs
+concatenar (x:xs) [] = x : concatenar xs []
+concatenar (x:xs) (y:ys) = x : concatenar xs (y:ys)
 
