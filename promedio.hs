@@ -1,6 +1,5 @@
-{-# LANGUAGE DataKinds #-}
-import Text.Parsec.Language (haskell)
-import System.Win32 (xBUTTON1, COORD (xPos))
+import Prelude hiding ((!!), (++))
+
 promedio:: Float -> Float -> Float
 promedio x y = (x+y)/2
 
@@ -130,4 +129,33 @@ concatenar [] [] = []
 concatenar [] (x:xs) = x : concatenar [] xs
 concatenar (x:xs) [] = x : concatenar xs []
 concatenar (x:xs) (y:ys) = x : concatenar xs (y:ys)
+
+tomar2:: Int -> [a]->[a]
+tomar2 n [] = []
+tomar2 n (x:xs) | n == 0 = []
+                | otherwise = x : tomar2 (n-1) xs
+
+soltar:: Int -> [a]->[a]
+soltar n [] = []
+soltar n (x:xs) | n == 0 = x : xs
+                | otherwise = soltar (n-1) xs
+
+largo2:: [a]->Int
+largo2 [] = 0
+largo2 (x:xs) = 1 + largo xs
+
+sumalista:: [a]->[a]->[a]
+sumalista [] [] = []
+sumalista (x:xs) [] = x : sumalista xs []
+sumalista [] (x:xs) = x : sumalista [] xs
+sumalista (x:xs) (y:ys) = x : sumalista xs (y:ys)
+
+(++):: [a] -> [a] -> [a]
+[] ++ ys = ys  
+(x:xs) ++ ys = x : xs ++ ys
+
+(!!):: [a] -> Int -> a
+[] !! n = error "lista vacia"
+(x:xs) !! n      | n == 0 = x 
+                 | otherwise = xs !! (n-1)
 
