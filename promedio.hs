@@ -159,3 +159,6 @@ sumalista (x:xs) (y:ys) = x : sumalista xs (y:ys)
 (x:xs) !! n      | n == 0 = x 
                  | otherwise = xs !! (n-1)
 
+
+                 sdasd
+
